@@ -15,8 +15,16 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
+
+# to protect keys
+gem 'figaro'
+
+# to deal with images in AWS
+gem 'fog-aws'
+
 # handles images like avatars
 gem 'carrierwave'
+
 
 # generates sample data in your app
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
@@ -67,6 +75,7 @@ end
 group :production do
   gem 'pg'
   gem 'rails_12factor'
+  gem 'aws-sdk', '~> 2.3'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
